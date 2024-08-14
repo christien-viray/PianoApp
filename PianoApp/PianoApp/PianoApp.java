@@ -62,7 +62,7 @@ public class PianoApp extends JFrame {
                 note = whiteKeyNotes[(i-1) % 7];
                 octave = (i-1) / 7 + 3;
             }
-            JButton key = PianoKey.createKey(Color.WHITE, Color.BLACK, "PianoApp/sounds/piano_" + note + octave + ".wav");
+            JButton key = PianoKey.createKey(Color.WHITE, Color.BLACK, "sounds/piano_" + note + octave + ".wav");
             key.setBounds(whiteKeyPosition,50,keyWidth, keyHeight);
             
             key.addMouseListener(new MouseAdapter() {
@@ -104,7 +104,7 @@ public class PianoApp extends JFrame {
                 i % 7 ==blackKeyPattern[4]) {
 
                 String note = blackKeyNotes[blackKeyIndex % blackKeyPattern.length];
-                JButton key = PianoKey.createKey(Color.BLACK,Color.WHITE,"PianoApp/sounds/piano_" + note + octave + ".wav");
+                JButton key = PianoKey.createKey(Color.BLACK,Color.WHITE,"sounds/piano_" + note + octave + ".wav");
                 
                 int x = 10 + (i * whiteKeySpacing) + whiteKeySpacing - (keyWidth / 2);
                 int y = 50;
